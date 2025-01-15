@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+ background:black ;
+ color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+
+}
+
+.navbar a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.5s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: aqua;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    background: url('photo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 0.6;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 70o;
+    color: aqua;
+    line-height: 0.5;
+}
+
+.p3 {
+    font-size: 16px;
+    margin: 20px 0 35px;
+    color: white;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 150px;
+    background: aqua;
+    border: 2px solid aqua;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn-box a:hover {
+    color: aqua;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: aqua;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: aqua;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.home-sci a:hover {
+    color: black;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:aqua;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 55px;
+    width: 530px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: black;
+    opacity: 0.8;
+}
+.about {
+    padding: 40px 0;
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+    padding-left: 30px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: aqua;
+}
+
+b {
+    color: aqua;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 230px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: aqua;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: rgb(95, 162, 162);
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Projects Section */
+.projects {
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    margin-top: -60px;
+}
+
+.subtitle {
+    padding-bottom: 30px;
+}
+
+.projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects .subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: aqua;
+    margin-bottom: 40px;
+}
+
+.projects .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Project Card Styling */
+.project-col {
+    flex-basis: 45%;
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.project-col.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-col:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Image Hover Animation */
+.project-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.project-col:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Title Hover Effect */
+.project-col h3 {
+    font-size: 24px;
+    color: aqua;
+    margin-bottom: 10px;
+    position: relative;
+    opacity: 0.9;
+    transition: opacity 0.5s ease, letter-spacing 0.5s ease;
+}
+
+.project-col h3:hover {
+    opacity: 1;
+    letter-spacing: 1.5px;
+}
+
+/* Title Underline Effect */
+.project-col h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: aqua;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.4s ease;
+}
+
+.project-col:hover h3::after {
+    width: 100%;
+}
+
+/* Paragraph Hover Effect */
+.project-col p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+    opacity: 0.8;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-col:hover p {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* Scroll Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.resume {
+    padding: 30px 0; /* Reduced padding */
+    text-align: center;
+    /*background: #111;*/ /* Dark background for contrast */
+    color: white;
+}
+
+.resume-container {
+    max-width: 500px; /* Limit the width of the block */
+    margin: 0 auto; /* Center the block horizontally */
+    background: #222; /* Slightly lighter background for the container */
+    padding: 20px;
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.resume .subtitles {
+    font-size: 30px; /* Smaller subtitle */
+    font-weight: 600;
+    color: aqua;
+    margin-bottom: 15px; /* Subtle spacing */
+}
+
+.resume-container p {
+    font-size: 16px; /* Smaller text size */
+    margin-bottom: 20px; /* Space between text and button */
+    color: #ccc;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 8px 20px; /* Reduced padding for a cleaner look */
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    background: aqua;
+    border: none;
+    border-radius: 2cqmin;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: white;
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    color: black;
+}
+
+.footer-line {
+    width: 80%;
+    height: 2px;
+    background: aqua; /* Set the color of the line */
+    margin: 40px auto; /* Space before and after the line */
+}
+
+
+.contact-info {
+    padding: 0;/* Padding for spacing */
+    text-align: center;
+    color: white;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px; /* Space between items */
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: aqua;
+}
+
+.contact-item span {
+    font-size: 18px;
+    color: white;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    opacity: 0.5;
+}
+
+
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+}

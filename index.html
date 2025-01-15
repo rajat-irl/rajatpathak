@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Rajat Pathak</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Rajat Pathak</h1>
+            <h3>Web Developer</h3>
+            <p class="p3">I'm a web developer and enthusiastic learner. I enjoy building user-friendly websites and staying updated with the latest technologies. When I'm not coding, I'm exploring new programming languages and tech trends. My passion for continuous learning drives me to always seek out new challenges and opportunities. Let's connect and collaborate on exciting projects!</p>
+            <div class="btn-box">
+                <a href="#">Hire Me</a>
+                <a href="#">Lets Talk</a>
+            </div>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.instagram.com/rajat.irl/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/share/1ExHpapiXv/?mibextid=wwXIfr"><i class='bx bxl-facebook'></i></a>
+            <a href="http://linkedin.com/in/rajat-pathak-b615872b1"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <span class="home-imgHover"></span>
+    </section>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hello! I'm <b>Rajat Pathak</b>, a passionate web developer based in Pune, Maharashtra, India. With a knack for crafting seamless and dynamic websites, I blend creativity and technical expertise to elevate user experiences. I'm an enthusiastic learner, always on the lookout for new programming languages, cutting-edge tools, and opportunities to expand my horizons. Beyond coding, I find joy in hiking and photography, which helps me maintain a healthy work-life balance. I believe in the power of collaboration and am always open to connecting with like-minded individuals to share knowledge and ideas. Let's connect and create something amazing together!</p>
+                </div>
+                <div class="about-col-2">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Design Web/App Interface</li>
+                            <li><span>Web Development</span><br>Web Developer/Designer</li>
+                            <li><span>Programming Languages</span><br>Python/C++</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Development</span><br>Created Multiple Websites</li>
+                            <li><span>Python/C++</span><br>Created Multiple Applications</li>
+                            <li><span>Backend Programming</span><br>Created Backends Using mySQL/MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Schooling</span><br>Symbiosis School</li>
+                            <li><span>Junior College</span><br>Fergusson College</li>
+                            <li><span>Graduation</span><br>STES</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="projects">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="project-col">
+                    <img src="C:\Users\rajat\OneDrive\Desktop\personal portfolio\project1.png" alt="Project 1 Screenshot">
+                    <h3>ElevateU - A fully Working Website</h3>
+                    <p>A fully working pg website named 'ElevateU' with active login/signup pages and also with a working backend to save user deatils. Created using HTML, CSS, JS, PHP, MYSQL. </p>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-col">
+                    <img src="C:\Users\rajat\OneDrive\Desktop\personal portfolio\project2.jpeg"" alt="Project 2 Screenshot">
+                    <h3>Amazon Signup Clone</h3>
+                    <p>Amazon Signup Clone which registers and saves user details in the Backend. Created using HTML, CSS, JS, PHP, MYSQL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="resume">
+        <div class="resume-container">
+            <h1 class="subtitles">Resume</h1>
+            <p>Want to know more about my experience? Download my resume below.</p>
+            <a href="Rajat-Resume.pdf" class="resume-btn" download>Download Resume</a>
+        </div>
+    </section>
+    <div class="footer-line"></div>
+    <section class="contact-info">
+        <div class="contact-item">
+            <i class='bx bx-phone'></i> <span>+91 9822334556</span>
+        </div>
+        <div class="contact-item">
+            <i class='bx bx-envelope'></i> <span>rajatpathak1604@gmail.com</span>
+        </div>
+    </section>
+    <div class="footer-copyright">
+        <p>&copy; 2025 Rajat Pathak. All rights reserved.</p>
+    </div>
+     
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        
+    const projectCols = document.querySelectorAll('.project-col');
+
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.8; // Reveal when 80% of the viewport
+        projectCols.forEach((col) => {
+            const colTop = col.getBoundingClientRect().top;
+            if (colTop < triggerBottom) {
+                col.classList.add('show'); // Add 'show' class to trigger animations
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Trigger the animation immediately if already in the viewport
+    revealOnScroll();
+
+
+    </script>
+    
+</body>
+</html>
