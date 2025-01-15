@@ -513,3 +513,142 @@ b {
         width: 0;
     }
 }
+
+/* Large screens (desktops and laptops) */
+@media screen and (min-width: 1024px) {
+    .home-content h1 {
+        font-size: 56px;
+    }
+
+    .home-content h3 {
+        font-size: 32px;
+    }
+
+    .btn-box a {
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 45%;
+    }
+
+    .project-col {
+        flex-basis: 45%;
+    }
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 1023px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar {
+        margin-top: 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .btn-box a {
+        width: 140px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .project-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Small screens (mobiles) */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-sci {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .btn-box a {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .projects .row {
+        flex-direction: column;
+    }
+
+    .project-col {
+        flex-basis: 100%;
+    }
+}
+
+/* Extra small screens (very small mobiles) */
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 16px;
+    }
+
+    .btn-box a {
+        font-size: 14px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-item i {
+        font-size: 16px;
+    }
+}
